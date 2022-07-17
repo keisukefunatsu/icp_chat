@@ -1,0 +1,36 @@
+{
+  "canisters": {
+    "icp_chat_backend": {
+      "candid": "src/icp_chat_backend/icp_chat_backend.did",
+      "package": "icp_chat_backend",
+      "type": "rust"
+    },
+    "icp_chat_frontend": {
+      "dependencies": [
+        "icp_chat_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icp_chat_frontend/src/index.html"
+      },
+      "source": [
+        "src/icp_chat_frontend/assets",
+        "dist/icp_chat_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
