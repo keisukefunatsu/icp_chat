@@ -4,7 +4,7 @@ services:
     build:
       dockerfile: ./.devcontainer/Dockerfile
       context: ../    
-    restart: always
+    tty: true
     volumes:
       - "../:/workspace:cached"
     ports:

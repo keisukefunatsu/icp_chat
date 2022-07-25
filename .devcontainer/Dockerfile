@@ -6,13 +6,6 @@ FROM --platform=linux/amd64 mcr.microsoft.com/vscode/devcontainers/typescript-no
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends vim
 
-
-# ********************************************************
-# * Anything else you want to do like clean up goes here *
-# ********************************************************
-
-# [Optional] Set the default user. Omit if you want to keep the default as root.
-USER $USERNAME
 # [Optional] Uncomment if you want to install more global node packages
 # RUN su node -c "npm install -g <your-package-list -here>"
 RUN mkdir /workspace
